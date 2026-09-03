@@ -1,0 +1,17 @@
+name: MyWorkFlow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-slim
+
+    steps:
+      - name: first-stage
+        run: echo "welcome to First Github Pipeline"
+
+      - name: second-stage
+        run: echo "this is my second stage"
