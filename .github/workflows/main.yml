@@ -1,8 +1,9 @@
-name: newPipeline
+name: mypipeline
 
 on:
   push:
     branches:
+      - main
       - master
 
 jobs:
@@ -10,10 +11,5 @@ jobs:
     runs-on: ubuntu-slim
 
     steps:
-      - name: first stage
-        run: |
-          echo "welcome to first pipeline stage"
-          echo "welcome to second line"
-
-      - name: new stage
-        run: echo "hey everyone"
+      - name: myone
+        run: echo hey
