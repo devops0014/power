@@ -15,3 +15,6 @@ jobs:
 
       - name: second-stage
         run: echo "this is my second stage"
+
+      - name: stage-3
+        run: echo This is stage-3
