@@ -13,5 +13,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
+
       - name: docker
-        run: docker build -t image1 .
+        run: |
+          chmod 777 /var/run/docker.sock
+          docker build -t image1 .
