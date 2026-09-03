@@ -2,15 +2,16 @@ name: mypipeline
 
 on:
   workflow_dispatch:
- 
-  
-    
-  
-
+  push:
+    branches:
+      - master
 jobs:
   build:
     runs-on: ubuntu-slim
 
     steps:
-      - name: myone
-        run: echo hey
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: docker
+        run: docker build -t image1 .
