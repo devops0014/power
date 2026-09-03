@@ -21,5 +21,4 @@ jobs:
 
       - name: docker
         run: |
-          chmod 777 /var/run/docker.sock
           docker build -t image1 .
